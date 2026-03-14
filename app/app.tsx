@@ -23,6 +23,14 @@ export default function App() {
     return (
         <div className="mx-auto flex min-h-screen max-w-5xl flex-col">
             <div className="min-h-0 flex-1 overflow-y-auto p-4">
+                <div className="mb-6 flex flex-col items-center text-center">
+                    <p className="max-w-xl text-sm text-neutral-600 dark:text-neutral-400">
+                        This example uses Streaming Chat Completion for
+                        real-time conversational AI. Messages stream in as they
+                        are generated.
+                    </p>
+                </div>
+
                 {agentTasks.map((task) => (
                     <div key={task.taskKey} className="mb-4">
                         <div className="mb-2 ml-auto w-fit max-w-[80%] rounded-lg bg-blue-500 px-3 py-2 text-right text-white dark:bg-blue-800">
