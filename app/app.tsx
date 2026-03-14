@@ -21,7 +21,7 @@ export default function App() {
     }
 
     return (
-        <div className="mx-auto flex min-h-screen max-w-5xl flex-col">
+        <div className="mx-auto flex h-screen max-w-5xl flex-col">
             <div className="min-h-0 flex-1 overflow-y-auto p-4">
                 <div className="mb-6 flex flex-col items-center text-center">
                     <p className="max-w-xl text-sm text-neutral-600 dark:text-neutral-400">
@@ -50,7 +50,7 @@ export default function App() {
             </div>
             <form
                 onSubmit={handleSubmit}
-                className="flex gap-2 border-t border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-950"
+                className="flex shrink-0 gap-2 border-t border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-950"
             >
                 <input
                     type="text"
