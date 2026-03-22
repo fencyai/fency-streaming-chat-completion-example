@@ -2,9 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
-<<<<<<< Updated upstream
-  ]
-=======
   ],
   "packageRules": [
     {
@@ -12,7 +9,6 @@
         "minor",
         "patch"
       ],
-      "matchCurrentVersion": "!/^0/",
       "automerge": true
     }
   ],
@@ -20,5 +16,4 @@
     "enabled": true,
     "automerge": true
   }
->>>>>>> Stashed changes
 }
