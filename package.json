@@ -1,36 +1,28 @@
 {
-  "name": "fency-streaming-chat-completion-example",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-<<<<<<< Updated upstream
-    "@fencyai/js": "^0.1.139",
-    "@fencyai/react": "^0.1.139",
-    "next": "16.2.2",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
-=======
-    "@fencyai/js": "^0.1.154",
-    "@fencyai/react": "^0.1.154",
-    "next": "16.1.6",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
->>>>>>> Stashed changes
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.2",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+    "name": "fency-streaming-chat-completion-example",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint"
+    },
+    "dependencies": {
+        "@fencyai/js": "^0.1.154",
+        "@fencyai/react": "^0.1.154",
+        "next": "16.2.2",
+        "react": "19.2.4",
+        "react-dom": "19.2.4"
+    },
+    "devDependencies": {
+        "@tailwindcss/postcss": "^4",
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "eslint": "^9",
+        "eslint-config-next": "16.2.2",
+        "tailwindcss": "^4",
+        "typescript": "^5"
+    }
 }
