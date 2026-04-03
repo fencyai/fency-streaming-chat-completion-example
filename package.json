@@ -9,11 +9,19 @@
     "lint": "eslint"
   },
   "dependencies": {
+<<<<<<< Updated upstream
     "@fencyai/js": "^0.1.139",
     "@fencyai/react": "^0.1.139",
     "next": "16.2.2",
     "react": "19.2.4",
     "react-dom": "19.2.4"
+=======
+    "@fencyai/js": "^0.1.154",
+    "@fencyai/react": "^0.1.154",
+    "next": "16.1.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+>>>>>>> Stashed changes
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
