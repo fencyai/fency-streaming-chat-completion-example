@@ -53,6 +53,7 @@ export function useChat({ model, ...agentTasksProps }: UseChatProps): UseChat {
                 messages: nextMessages,
                 model,
             })
+            console.log(response)
             if (
                 response.type === 'success' &&
                 response.response.taskType === 'StreamingChatCompletion'
