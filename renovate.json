@@ -5,6 +5,12 @@
   ],
   "packageRules": [
     {
+      "matchPackageNames": ["@fencyai/js", "@fencyai/react"],
+      "schedule": ["at any time"],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
       "matchUpdateTypes": [
         "minor",
         "patch"
