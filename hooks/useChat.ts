@@ -6,7 +6,6 @@ import type { AgentTaskModel } from '@fencyai/js'
 interface UseChatProps extends UseAgentTasksProps {
     model: AgentTaskModel
     temperature: number
-    topP: number
 }
 
 interface UseChat {
@@ -18,7 +17,6 @@ interface UseChat {
 export function useChat({
     model,
     temperature,
-    topP,
     ...agentTasksProps
 }: UseChatProps): UseChat {
     const { agentTasks, createAgentTask } = useAgentTasks(agentTasksProps)
@@ -60,7 +58,6 @@ export function useChat({
                 messages: nextMessages,
                 model,
                 temperature,
-                topP,
             })
             console.log(response)
             if (
