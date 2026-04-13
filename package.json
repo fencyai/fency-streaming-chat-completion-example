@@ -9,8 +9,8 @@
         "lint": "eslint"
     },
     "dependencies": {
-        "@fencyai/js": "^0.1.170",
-        "@fencyai/react": "^0.1.170",
+        "@fencyai/js": "^0.1.171",
+        "@fencyai/react": "^0.1.171",
         "next": "16.2.3",
         "react": "19.2.5",
         "react-dom": "19.2.5"
