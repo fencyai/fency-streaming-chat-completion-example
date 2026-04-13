@@ -1,16 +1,27 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import { fetchCreateAgentTaskClientToken } from '@/lib/fetchCreateAgentTaskClientToken'
-import { AgentTaskProgress } from '@fencyai/react'
+import { ModelSelector } from '@/components/ModelSelector'
+import { TemperatureSlider } from '@/components/TemperatureSlider'
+import { TopPSlider } from '@/components/TopPSlider'
 import { useChat } from '@/hooks/useChat'
+import { fetchCreateAgentTaskClientToken } from '@/lib/fetchCreateAgentTaskClientToken'
+import type { AgentTaskModel } from '@fencyai/js'
+import { AgentTaskProgress } from '@fencyai/react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function App() {
     const [input, setInput] = useState('')
+    const [model, setModel] = useState<AgentTaskModel>(
+        'anthropic/claude-sonnet-4.5'
+    )
+    const [temperature, setTemperature] = useState(1)
+    const [topP, setTopP] = useState(1)
     const scrollRef = useRef<HTMLDivElement>(null)
     const { agentTasks, isSubmitting, sendMessage } = useChat({
         fetchCreateAgentTaskClientToken,
-        model: 'anthropic/claude-sonnet-4.5',
+        model,
+        temperature,
+        topP,
     })
 
     useEffect(() => {
@@ -39,6 +50,26 @@ export default function App() {
                 ref={scrollRef}
                 className="min-h-0 flex-1 overflow-y-auto p-4"
             >
+                <details
+                    className="mb-6 rounded-lg border border-neutral-200 bg-neutral-50 p-4 dark:border-neutral-700 dark:bg-neutral-900"
+                    open
+                >
+                    <summary className="cursor-pointer font-semibold text-neutral-900 dark:text-neutral-100">
+                        Model &amp; sampling
+                    </summary>
+                    <div className="mt-4 flex flex-col gap-4">
+                        <ModelSelector value={model} onChange={setModel} />
+                        <div className="grid gap-4 sm:grid-cols-2">
+                            <TemperatureSlider
+                                model={model}
+                                value={temperature}
+                                onChange={setTemperature}
+                            />
+                            <TopPSlider value={topP} onChange={setTopP} />
+                        </div>
+                    </div>
+                </details>
+
                 <div className="mb-6 flex flex-col items-center text-center">
                     <p className="max-w-xl text-sm text-neutral-600 dark:text-neutral-400">
                         This example uses Streaming Chat Completion for

@@ -5,6 +5,8 @@ import type { AgentTaskModel } from '@fencyai/js'
 
 interface UseChatProps extends UseAgentTasksProps {
     model: AgentTaskModel
+    temperature: number
+    topP: number
 }
 
 interface UseChat {
@@ -13,7 +15,12 @@ interface UseChat {
     sendMessage: (text: string) => Promise<void>
 }
 
-export function useChat({ model, ...agentTasksProps }: UseChatProps): UseChat {
+export function useChat({
+    model,
+    temperature,
+    topP,
+    ...agentTasksProps
+}: UseChatProps): UseChat {
     const { agentTasks, createAgentTask } = useAgentTasks(agentTasksProps)
     const [isSubmitting, setIsSubmitting] = useState(false)
     const lastAssistantRef = useRef<{
@@ -52,6 +59,8 @@ export function useChat({ model, ...agentTasksProps }: UseChatProps): UseChat {
                 type: 'StreamingChatCompletion',
                 messages: nextMessages,
                 model,
+                temperature,
+                topP,
             })
             console.log(response)
             if (
