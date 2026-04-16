@@ -11,7 +11,7 @@
     "dependencies": {
         "@fencyai/js": "^0.1.171",
         "@fencyai/react": "^0.1.171",
-        "next": "16.2.3",
+        "next": "16.2.4",
         "react": "19.2.5",
         "react-dom": "19.2.5"
     },
@@ -21,7 +21,7 @@
         "@types/react": "^19",
         "@types/react-dom": "^19",
         "eslint": "^9",
-        "eslint-config-next": "16.2.3",
+        "eslint-config-next": "16.2.4",
         "tailwindcss": "^4",
         "typescript": "^5"
     }
